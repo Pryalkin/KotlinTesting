@@ -1,8 +1,41 @@
+import Color.*
+
 fun main(args: Array<String>){
-//    example1();
-//    example2();
-//    example3();
-    example4();
+//    example1()
+//    example2()
+//    example3()
+//    example4()
+//    example5()
+    example6()
+}
+
+fun example6() {
+    println(getFavoriteColor(GREEN))
+    getFavoriteColor2(setOf(GREEN, RED))
+}
+
+fun getFavoriteColor2(of: Set<Color>){
+      when (of){
+          setOf(WHITE, BLACK) -> println("Черно-белый")
+          setOf(RED, GREEN) -> println("Красно-зеленый")
+      }
+}
+
+fun getFavoriteColor(color: Color) = when(color){
+    WHITE -> "Белый"
+    GREEN -> "Зеленый"
+    BLACK -> "Черный"
+    RED -> "Красный"
+    else -> "Без цвета"
+}
+
+
+
+fun example5() {
+    println(Color.RED)
+    println(Color.RED.name)
+    println(Color.RED.opacity)
+    println(Color.RED.colorHex)
 }
 
 fun example4() {
